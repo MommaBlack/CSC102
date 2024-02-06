@@ -1,0 +1,53 @@
+/*This is the only option to make comments. 
+This is a multi line comment. 
+
+The format of a CSS style is: 
+
+Selector{
+    property value: value;
+    property2 value: value;
+}
+
+All of the HTML page content is in the body section,so when we use the body selector we are changing things for th whole page. 
+the whole page 
+*/
+body{
+background-color: darkviolet;
+color: chartreuse;
+}
+
+/* heading 1 we are going to change the fornd used for this page*/
+h1{
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(4, 8, 0);
+}
+
+/* Style the links */
+nav{
+    height: 600px;
+    width: 200px;
+    float: left; 
+    padding: 5px;
+    line-height: 30px;
+}
+
+footer{
+position: fixed;
+bottom: 0;
+left: 50%;
+text-align: center;
+}
+/*this is a custom selector  - it will only effect the idem on the HTML page that has an ID of Spongebob; these settings will help with a future assignment. */
+#Spongebob{
+ position: absolute;  
+ left: 25%;
+ top: 25%;
+ width: 200px; 
+}
+/* change the header to be in the center of the page */ 
+header{
+text-align: center;
+/* anchor tag styles - make the hyperlink look better */
+a{text-decoration: none;
+color: black;}
+}
