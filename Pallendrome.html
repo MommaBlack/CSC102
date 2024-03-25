@@ -14,8 +14,8 @@
  
     <script>
         function pallindromeFun(){
-            console.log(pallindromeTest("radar"));
-            cosnole.log(pallindromeTest("Fun stuff"));
+            //console.log(pallindromeTest("radar"));
+            //consnole.log(pallindromeTest("Fun stuff"));
 
             //flag varibable to test if the user wants to continue
             var bContinue = true;
@@ -31,20 +31,19 @@
                     var message = "";
                     //if the word is a palindrome, let the user know 
                     if (bIsPalindrome){
-                        message = userImput + "is a palindrome!";
-
+                        message = userImput + "is a palindrome!";{
                         //tell the user is a palindrome 
                            // if the word is NOT a palindrome let user know
-                       else {
+{else {
                             //tell the user their word is NOT a palindrome 
                         message = userImput + "is not a palindrome!";
                        }
-                    }
+                    
                     //display message to user
                         alert(message);
 
                         // prompt to se if the user wants to continue 
-                        var anser = prompt("do you want to continue? (y/n)");
+                        var anwser = prompt("do you want to continue? (y/n)");
                         //check the anser, if n, exit the loop
                         if (answer == "n"){
                              //set our boolean loop monitor variable to false do that the loop will stop running when the while condition is tested below
