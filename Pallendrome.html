@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Palindrome</title>
+</head>
+<body>
+    <!--Create Heading 1 with page title  -->
+    <h1>Welcome to my Palindrome Checker</h1>
+
+    <!--This button will start the palindrom checking the button will say "Test Words" -->
+    <button onclick="pallindromeFun();" >Test Words</button>
+ 
+    <script>
+        function pallindromeFun(){
+            console.log(pallindromeTest("radar"));
+            cosnole.log(pallindromeTest("Fun stuff"));
+
+            //flag varibable to test if the user wants to continue
+            var bContinue = true;
+
+            do{
+                    //prompt the user to enter a word
+                    var userImput = prompt('Enter awrodto see if it is a palindrome: ');
+
+                    // check to see if the users word is a palindrome
+                    var bIsPalindrome = pallindromeTest(userImput);
+                    
+                    //create a message for the user
+                    var message = "";
+                    //if the word is a palindrome, let the user know 
+                    if (bIsPalindrome){
+                        message = userImput + "is a palindrome!";
+
+                        //tell the user is a palindrome 
+                           // if the word is NOT a palindrome let user know
+                       else {
+                            //tell the user their word is NOT a palindrome 
+                        message = userImput + "is not a palindrome!";
+                       }
+                    }
+                    //display message to user
+                        alert(message);
+
+                        // prompt to se if the user wants to continue 
+                        var anser = prompt("do you want to continue? (y/n)");
+                        //check the anser, if n, exit the loop
+                        if (answer == "n"){
+                             //set our boolean loop monitor variable to false do that the loop will stop running when the while condition is tested below
+                            bContinue = false;
+                        }
+            }
+            while(bContinue); // while bContinue is true, the loop with keep running; if bContinue is false, the loop will not run anymore
+        }
+
+         // This function will test a string to see if it is the same forwards and backwards. 
+
+        function pallindromeTest(strToTest){
+        //    remove the whitespace from the string and make the string lower case.
+        var strCleaned = strToTest.replace(/\s/g,"").toLowerCase();
+        console.log("strCleaned=" + strCleaned);
+
+            // put the string into an array so we can easily reverse it. 
+            var strArray = strCleaned.split("");
+            //now lets reverse the order of the letters in the array 
+            var strReversedArray = strArray.reverse();
+
+            //put the array back into the string 
+            var strRev = strReversedArray.join("");
+            console.log("strRev=" + strRev);
+
+            //test to see if the 2 strings are the same, both forwards and baackwards; if the words are the same the funcuntion will retun true if not the function will return false. 
+            return strRev ==strCleaned;
+        }
+    </script>
+</body>
+</html>
