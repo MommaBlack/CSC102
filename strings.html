@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Assingment Strings</title>
+<!-- link to the css file-->
+<link href="CSS file.css" rel="stylesheet">
+</head>
+<body>
+<!--  set up a form that takes user first and last name and a zip code and then displays the secret message if they entered their information correctly.  -->
+    <H1>Welcome to my login page </H1>
+    <H2>Please enter your information to see a secret message. </H2>
+
+<!-- create a form to gather user imput-->
+    <form method="post" onsubmit=" return validateForm();" >
+<!--Get users first name -->
+        <label for="fname"> First Name: </label>
+        <imput type="text" id="fname" name="fname"><br><br>
+<!-- get the users last name-->
+        <label for="lname"> Last name Name: </label>
+        <imput type="text" id="lname" name="lname"><br><br>
+<!-- Get the usser zip code-->
+        <label for="zip"> Zip Code: </label>
+        <imput type="text" id="zip" name="zip"><br><br>
+<!-- Here is the submit button so the form can be processed-->
+        <imput type="submit" value="Submit">
+    </form>
+    <script>
+    // this function will validate the form imput to make sure it meets our critera.
+        function validateForm(){
+    // Get the first name that the usser entered on the form.
+            var firstName = doucmets.getElementById("fname").value;
+
+    // Get the last name that the usser entered on the form.
+             var lasttName = doucmets.getElementById("lname").value;
+
+    // Get the zip code that the usser entered on the form.
+            var ZipCode = doucmets.getElementById("zip").value;
+
+            console.log("First Name: " + firstName);
+            console.log("Last Name: " + lastName);
+            console.log("Zip Code: " + zipcode);
+
+    // create a variable to hold firstName + space + lastName 
+            var fullName = firstName + " " + lastName);
+            console.log("full Name:" + fullName);
+
+    // do the imput validation
+    // we will check for more than 20 letters in the first and last names or if no names were entered, the length will be one because of the space we add between first and last name.
+            if (fullName.lenght > 20 || fullName.length == 1){
+                console.log("Invalid name");
+    //let the usser know that they did not enter the information in correctly. 
+                alert ("Please enter a name that is shorter than 20 letters.")
+    //make sure the form does not submit 
+            return false;
+            }
+                else if (zipCode.length != 5 ){
+                console.log("Invalid zip code");
+    //let the user know that the zip code was not entered correctly.
+                alert("Ziip code was not 5 digits. Please try again.")
+    //make sure that form does not submit.
+                return false; 
+            }
+        
+
+
+        }
+    </script>
+</body>
+</html>
