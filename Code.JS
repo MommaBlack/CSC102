@@ -50,3 +50,95 @@ function RollDie(){
     return Math.ceil(die)
 }
 //cannot debug from Js only html.
+
+
+
+
+
+
+
+
+
+
+ // this function will validate the form imput to make sure it meets our critera.
+ function validateForm(){
+    // Get the first name that the usser entered on the form.
+            var firstName = doucmets.getElementById("fname").value;
+
+    // Get the last name that the usser entered on the form.
+             var lasttName = doucmets.getElementById("lname").value;
+
+    // Get the zip code that the usser entered on the form.
+            var ZipCode = doucmets.getElementById("zip").value;
+
+            console.log("First Name: " + firstName);
+            console.log("Last Name: " + lastName);
+            console.log("Zip Code: " + zipcode);
+
+    // create a variable to hold firstName + space + lastName 
+            var fullName = firstName + " " + lastName);
+            console.log("full Name:" + fullName);
+
+    // do the imput validation
+    // we will check for more than 20 letters in the first and last names or if no names were entered, the length will be one because of the space we add between first and last name.
+            if (fullName.lenght > 20 || fullName.length == 1){
+                console.log("Invalid name");
+    //let the usser know that they did not enter the information in correctly. 
+                alert ("Please enter a name that is shorter than 20 letters.")
+    //make sure the form does not submit 
+            return false;
+            }
+                else if (zipCode.length != 5 ){
+                console.log("Invalid zip code");
+    //let the user know that the zip code was not entered correctly.
+                alert("Ziip code was not 5 digits. Please try again.")
+    //make sure that form does not submit.
+                return false; 
+            }
+            else{
+    // they passed validation! Release the secret word!
+                coonsole.log ("We are good to go.");
+                alert("Welcome, " + fulName + ". The secret word is validation.");
+                return true; 
+            }
+        
+
+
+        }
+
+
+// Here is the code for moving the meme image around. 
+//Track the interval id. 
+var intervalId = 0;
+
+// This function will make our image move around. 
+            function StartImageMove(){
+//Create variable that points to our HTML meme image
+            var meme = doucment.getElementById("Spongebob");
+            intervalId = setInterval(funtion(){
+//Create a variable to hold the new X coodinate. 
+            var newX = getRandomCoordinate();
+//Create a variable to hold the new Y coodinate. 
+            var newY = Math.floor(Math.random() * 1000);  
+            
+//lets change the location of our image. 
+                meme.style.left = newX + "px";
+                meme.style.top = newY +"px";
+
+                console.log("x: " + meme.style.left + "top" + meme.style.top);
+            }, 1000); 
+// the 1000 is time in miliseconds - 1000 is 1 second.
+//this code will move the image every 1 second. 
+            }
+
+//Create the function to stop the image from moving. 
+            function StopImageMove(){
+//Call the built in javascript fucntion to clear the interval - stop image from moving. 
+            clearInterval{ntervalId};
+            }
+
+// create a function to generate our coodinate randomly 
+            function getRandomCoordinate(){
+//This funciton will return a random coodinate back to the coode that called it. 
+                return Math.floor(Math.random() * 1000);
+            }
