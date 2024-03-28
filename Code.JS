@@ -114,8 +114,8 @@ var intervalId = 0;
 // This function will make our image move around. 
             function StartImageMove(){
 //Create variable that points to our HTML meme image
-            var meme = doucment.getElementById("Spongebob");
-            intervalId = setInterval(funtion(){
+            var meme = document.getElementById("Spongebob");
+            intervalId = setInterval(function(){
 //Create a variable to hold the new X coodinate. 
             var newX = getRandomCoordinate();
 //Create a variable to hold the new Y coodinate. 
@@ -134,7 +134,7 @@ var intervalId = 0;
 //Create the function to stop the image from moving. 
             function StopImageMove(){
 //Call the built in javascript fucntion to clear the interval - stop image from moving. 
-            clearInterval{ntervalId};
+            clearInterval(intervalId);
             }
 
 // create a function to generate our coodinate randomly 
