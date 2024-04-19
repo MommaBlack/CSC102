@@ -1,0 +1,64 @@
+1<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13 HTML Table Example</title>
+    <link href="main.css" rel="stylesheet">
+    <style>
+        table{
+                width: 100%;
+                border-collapse; /* This prevents stacked border lines */ 
+        }
+
+        th, td{
+            border: 1px sollid white;
+            text-align: left; 
+            padding: 8px;
+        }
+
+        th{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Ths is an example of a table written in HTML</h1>
+
+    <h2>Programing History</h2>
+
+<!-- Create the HTML table -->
+    <table>
+<!--This is our heading row-->
+        <tr>
+<!--th is table heading: th tags can bee veeretical or horizontal -->
+                <th>Language</th>
+                <th>Fact</th>
+        </tr>
+<!--This is our table row -->
+        <tr>
+<!--This is our table column -->
+                <td>HTML</td>
+                <td>HTML (Hypertext language) was created by Tim Berners-Lee in 1991 while working at CERN.</td>
+        </tr>
+        <tr>
+                <td>JavaScript</td>
+                <td>JavaScript was created by Brendon Eich while working at Netscape. </td>
+        </tr>
+        <tr>
+                <td>Python</td>
+                <td>Python was created by Guido Van Rossum and released in 1991.</td>
+        </tr>
+        <tr>
+                <td>C++</td>
+                <td>C++ was developed by Bjarne Strousturup at Bll labs as an extention of C programming language.</td>
+        </tr>
+        <tr>
+                <td>Java</td>
+                <td>Java was developed by James Gossling at Sun Mircrosystems and first released in 1995.</td>
+        </tr>
+    </table>
+</body>
+</html>
