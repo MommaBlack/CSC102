@@ -52,15 +52,7 @@ function RollDie(){
 //cannot debug from Js only html.
 
 
-
-
-
-
-
-
-
-
- // this function will validate the form imput to make sure it meets our critera.
+// this function will validate the form imput to make sure it meets our critera.
  function validateForm(){
     // Get the first name that the usser entered on the form.
             var firstName = doucmets.getElementById("fname").value;
@@ -141,4 +133,55 @@ var intervalId = 0;
             function getRandomCoordinate(){
 //This funciton will return a random coodinate back to the coode that called it. 
                 return Math.floor(Math.random() * 1000);
+
+
+
+
+                //*sound code
+
+function addSound(){
+    // Create an audio HTML element in JavaScript that will add to the HTML page.
+            var soundElem = document.createElement("audio");
+    
+    // nickname to the play button in the HTML
+            var playButton = document.getElementById("btnPlay");
+    
+    // nickname to the pause button in the HTML
+            var pauseButton = document.getElementById("btnPause");
+    
+    // set the attributes for sound element. for the id make sure there are no spaces.  
+            soundElem.setAttribute("id","mySound")
+    //specify the sound file 
+            soundElem.setAttribute("src","us-lab-background.mp3");
+    
+    //add the audio p;ayer controls - this is optional
+            soundElem.setAttribute("controls","controls");
+            
+            //add the audio HTML element to the page
+            document.body.appendChild(soundElem);
+    
+            cosole.log("sound element added to the page.")
+    
+    //Make the play and pause buttons visable
+            playButton.hidden = false;
+            pauseButton.hidden = false;
+    }
+    
+    //This function runs when the play button is clicked - it plays the sound. 
+            function playSound(){
+    //Pointer to our new sound element. 
+            var audio = document.getElementById("mySound");
+    //Play the sound 
+            aduio.play();
+            console.log("sound played");
+            }
+    
+    //This function runs when the pause button is clicked - it will pause the sound. 
+            function pauseSound(){
+    //Pointer to our new sound element. 
+            var audio = document.getElementById("mySound");
+    //Pause the sound. 
+            aduio.pause();
+            console.log("sound paused");  
+            }
             }
