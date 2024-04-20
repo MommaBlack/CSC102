@@ -5,7 +5,55 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Week 11 SOUND</title>
  <!--add link to the JavaScript file -->   
-    <script src="code.js"></script>
+    <script src="Code.JS">
+                     //*sound code
+
+function addSound(){
+    // Create an audio HTML element in JavaScript that will add to the HTML page.
+            var soundElem = document.createElement("audio");
+    
+    // nickname to the play button in the HTML
+            var playButton = document.getElementById("btnPlay");
+    
+    // nickname to the pause button in the HTML
+            var pauseButton = document.getElementById("btnPause");
+    
+    // set the attributes for sound element. for the id make sure there are no spaces.  
+            soundElem.setAttribute("id","mySound")
+    //specify the sound file 
+            soundElem.setAttribute("src","us-lab-background.mp3");
+    
+    //add the audio p;ayer controls - this is optional
+            soundElem.setAttribute("controls","controls");
+            
+            //add the audio HTML element to the page
+            document.body.appendChild(soundElem);
+    
+            cosole.log("sound element added to the page.")
+    
+    //Make the play and pause buttons visable
+            playButton.hidden = false;
+            pauseButton.hidden = false;
+    }
+    
+    //This function runs when the play button is clicked - it plays the sound. 
+            function playSound(){
+    //Pointer to our new sound element. 
+            var audio = document.getElementById("mySound");
+    //Play the sound 
+            aduio.play();
+            console.log("sound played");
+            }
+    
+    //This function runs when the pause button is clicked - it will pause the sound. 
+            function pauseSound(){
+    //Pointer to our new sound element. 
+            var audio = document.getElementById("mySound");
+    //Pause the sound. 
+            aduio.pause();
+            console.log("sound paused");  
+            }
+    </script>
 </head>
 <body>
 <!--This is the page title-->
