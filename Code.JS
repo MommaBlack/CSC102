@@ -184,4 +184,70 @@ function addSound(){
             aduio.pause();
             console.log("sound paused");  
             }
+     
+            
+// Week 12 Lap time recorder
+
+//variable will keep track of the current lap
+//as we add laps, the value will bee increased by 1
+        var lapCounter = 0;
+
+// set up an empty array that will hold the lap times. 
+        var lapsArray = [];
+//This function will record a lap  - add a lap to the lapsArray each time the button is clicked. 
+
+        function recordLap(){
+//use .push to add an item to the end of the array.
+//new Date() will add the current date and time to the array.
+       lapsArray.push(new Date())
+
+//lets print out the information to the console. 
+       console.log("lap" + (lapCounter+1) + " recorded " + lapsArray[lapCounter]);
+
+//display a message to the user that the lap was recoded. 
+//Create the shortcut/nickname variable that points to the message div
+       var divMsg = document.getElementById("messageDiv");
+
+// Display a message based on which lap is being recoded 
+       if(lapCounter == 0){
+           divMsg.innerText = "The first lap was recorded";
+       }
+       else if (lapCounter == 1){
+           divMsg.innerText = "The second lap was recorded";
+       }
+       else if (lapCounter == 2){
+           divMsg.innerText = "The third lap was recorded";
+       }
+//Catch all else statement  - if the counter is greater than 2 to print out a generic message.
+       else{
+           divMsg.innerText = "Lap"  + (lapCounter+1) + " was recorded.";
+       }
+
+//increase the lap counter by 1 - it is equivelant to saying lapCounter = lapCounter +1
+       lapCounter++;
+   }
+
+//create the function to display the lap times to the user. 
+       function displayLaps(){
+//create a variable that is a pointer to the displayLaps div. 
+           var divLaps = document.getElementById("lapDiv");
+
+//create an unordered list to hold the lap times. 
+           var ulLaps = document.createElement("ul");
+
+//add the unordered list to the display laps div
+           divLaps.appendChild(ulLaps);
+
+//loop throught he laps array to the lap times to the unordered list.
+           for (var i = 0; i < lapsArray.length; i++){
+//create a list item that will be added to the unordered list. 
+           var liLap = document.createElement("li");
+
+//Add the lap time to the list item text. 
+           liLap.textContent = "Lap " + (i+1) + ": " + lapsArray[i];
+
+//add the list item to the unordered list.
+           ulLaps.appendChild(liLap);
+           }
+       }
             
