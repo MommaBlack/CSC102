@@ -68,7 +68,7 @@ function RollDie(){
             console.log("Zip Code: " + zipcode);
 
     // create a variable to hold firstName + space + lastName 
-            var fullName = firstName + " " + lastName);
+            var fullName = firstName + " " + lastName;
             console.log("full Name:" + fullName);
 
     // do the imput validation
@@ -133,7 +133,7 @@ var intervalId = 0;
             function getRandomCoordinate(){
 //This funciton will return a random coodinate back to the coode that called it. 
                 return Math.floor(Math.random() * 1000);
-
+            }
 
 
 
@@ -184,4 +184,4 @@ function addSound(){
             aduio.pause();
             console.log("sound paused");  
             }
-            }
+            
