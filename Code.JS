@@ -2,8 +2,9 @@
 /* multiline comment*/
 
 //This function will let us play a dice game.
-function PlayCraps(){
-    //We are going to narrate what the function does trhough the console
+        function PlayCraps(){
+//We are going to narrate what the function does trhough the console
+
     console.log("PlayCraps fucntion was called")
 
     //rol a die
@@ -42,20 +43,20 @@ else{
 
 }
 // Create a function that generateds a die roll or a random number between 1 and 6 
-function RollDie(){
+        function RollDie(){
     //generate a random number 
     //math.random give us a number between 0 and 6
-    var die = Math.random() *6;
+        var die = Math.random() *6;
     //we will get a rounded whole number that will be returned to whatever code calls this function.
-    return Math.ceil(die)
+        return Math.ceil(die)
 }
 //cannot debug from Js only html.
 
 
 // this function will validate the form imput to make sure it meets our critera.
- function validateForm(){
+        function validateForm(){
     // Get the first name that the usser entered on the form.
-            var firstName = doucmets.getElementById("fname").value;
+             var firstName = doucmets.getElementById("fname").value;
 
     // Get the last name that the usser entered on the form.
              var lasttName = doucmets.getElementById("lname").value;
@@ -63,13 +64,13 @@ function RollDie(){
     // Get the zip code that the usser entered on the form.
             var ZipCode = doucmets.getElementById("zip").value;
 
-            console.log("First Name: " + firstName);
-            console.log("Last Name: " + lastName);
-            console.log("Zip Code: " + zipcode);
+                console.log("First Name: " + firstName);
+                console.log("Last Name: " + lastName);
+                console.log("Zip Code: " + zipcode);
 
     // create a variable to hold firstName + space + lastName 
             var fullName = firstName + " " + lastName;
-            console.log("full Name:" + fullName);
+                console.log("full Name:" + fullName);
 
     // do the imput validation
     // we will check for more than 20 letters in the first and last names or if no names were entered, the length will be one because of the space we add between first and last name.
@@ -101,7 +102,7 @@ function RollDie(){
 
 // Here is the code for moving the meme image around. 
 //Track the interval id. 
-var intervalId = 0;
+            var intervalId = 0;
 
 // This function will make our image move around. 
             function StartImageMove(){

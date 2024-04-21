@@ -12,7 +12,7 @@ All of the HTML page content is in the body section,so when we use the body sele
 the whole page 
 */
 body{
-background-color: rgb(156, 104, 179);
+background-color: darkviolet;
 color: chartreuse;
 }
 
@@ -79,7 +79,7 @@ color: black;}
             }
 /* change the hover color of our button*/
             nav ul li a:hover{
-                background-color: pink;
+                background-color: rgb(221, 208, 208);
             }
 
 /* when the link is active */
