@@ -12,7 +12,7 @@ All of the HTML page content is in the body section,so when we use the body sele
 the whole page 
 */
 body{
-background-color: darkviolet;
+background-color: rgb(156, 104, 179);
 color: chartreuse;
 }
 
@@ -51,3 +51,40 @@ text-align: center;
 a{text-decoration: none;
 color: black;}
 }
+
+/* Menu Styles */ 
+
+
+/* set the nav and ul to some default settings */ 
+            nav ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+            }
+            nav ul li{
+                margin-bottom: 10px;
+                text-align: center;         
+            }
+            nav ul li a{
+              text-decoration:  none;
+              background-color: forestgreen; 
+              color: black;
+              font-size: 18 px;
+              padding: 10px 20px;
+              border-radius: 5px;
+              transition: background-color 0.3 s ease; 
+/* this gives a smooth transition when the background-color changes.*/
+              display: block;
+            }
+/* change the hover color of our button*/
+            nav ul li a:hover{
+                background-color: pink;
+            }
+
+/* when the link is active */
+nav ul li a.active{
+    background-color: darkgreen;
+
+}
+       
